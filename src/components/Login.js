@@ -25,7 +25,7 @@ const Login = () => {
           <button className='w-full bg-red-700 my-4 p-4 rounded-lg'>{!islogin?"Sign In":"sign Up"}</button>
           <h1 className='text-center'>OR</h1>
           <button className='w-full bg-gray-700 my-4 p-4 rounded-lg'>use sign in code</button>
-          
+
           <h1 className='cursor-pointer' onClick={isToggle}>{!islogin?"new to netflix? sign Up":"already a user Sign In"}</h1>
        </form>
     </div>
