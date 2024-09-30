@@ -82,7 +82,7 @@ const Login = () => {
     <>
     <div className='relative h-screen bg-black'>
        <Header/>
-       <div className='hidden sm:inline-flex absolute inset-0'> 
+       <div className=' hidden sm:inline-flex absolute inset-0'> 
           <img className=' min-w-full h-full'
            alt="bg" src="https://assets.nflxext.com/ffe/siteui/vlv3/47c2bc92-5a2a-4f33-8f91-4314e9e62ef1/web/IN-en-20240916-TRIFECTA-perspective_72df5d07-cf3f-4530-9afd-8f1d92d7f1a8_small.jpg"
           />
@@ -94,7 +94,7 @@ const Login = () => {
                 <input
                  type="text"
                  placeholder='user email' 
-                 className=' p-2 my-2 w-full rounded-lg h-1/3 bg-gray-700' 
+                 className=' p-2 my-2 w-full rounded-lg h-1/3 bg-gray-700 placeholder:capitalize' 
                  ref={email}
                  ></input>
 
@@ -102,13 +102,13 @@ const Login = () => {
                 ref={name}
                 type="text" 
                 placeholder='name'
-                className='p-2 my-2 w-full rounded-lg h-1/3 bg-gray-700' 
+                className='p-2 my-2 w-full rounded-lg h-1/3 bg-gray-700 placeholder:capitalize' 
                 ></input>}
 
                 <input 
                 type="password"
                 placeholder='password'
-                className='p-2 my-2 w-full rounded-lg bg-gray-700 h-1/3'
+                className='p-2 my-2 w-full rounded-lg bg-gray-700 h-1/3 placeholder:capitalize'
                 ref={password}
                 ></input>
               
