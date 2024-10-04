@@ -8,7 +8,7 @@ const Maincontainer = () => {
   const movie=useSelector(store=>store.movies?.PlayingMovies);
   if(!movie) return null;
   const mainmovie=movie[0];
-  console.log(mainmovie)
+  
   
   return (
     <div>
