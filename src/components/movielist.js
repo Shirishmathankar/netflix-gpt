@@ -7,7 +7,7 @@ const Movielist = ({title,movies}) => {
    
   return movies&&(
     <div className="p-2 bg-black">
-      <h1 className="font-bold text-xl mb-4 text-white capitalize">{title}</h1>
+      <h1 className="font-bold text:lg md:text-xl mb-4 text-white capitalize">{title}</h1>
       <div className='flex overflow-x-scroll'>
        <div className="flex">
     

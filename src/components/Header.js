@@ -45,22 +45,23 @@ const Header = () => {
 
     }, []);
   return (
-    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between'>
-        <img className=' md:w-44 sm:w-30 w-24'
+    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between flex-col md:flex-row'>
+        <img className=' md:w-44 sm:w-30 w-24 mx-auto md:mx-0'
         alt="logo"        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
         
         />
-        <div>
-         { isThere&&
-          <select className='bg-gray-600 p-3 m-2 rounded-md' onChange={SelectedLang}>
+        <div className='flex justify-center md:justify-end'>
+         { selector&&isThere&&
+          <select className='bg-gray-600 p-3 m-2 rounded-md cursor-pointer text-sm md:text-lg' onChange={SelectedLang}>
             { 
-              LANGUAGES.map(language=><option  key={language.identifier} value={language.identifier}>{language.name}</option>)  
+                LANGUAGES.map(language=><option  key={language.identifier} value={language.identifier}>{language.name}</option>)  
             }
             
           </select> 
          } 
-        {selector&&<button className='bg-purple-500 text-white p-2 m-2 my-2 rounded-md font-bold text-lg z-10' onClick={Gptsearch}>{isThere?"Homepage":"GptSearch"}</button>}
-        {selector&&<button className='text-white bg-red-600 p-2 m-2 rounded-md font-bold text-lg z-10' onClick={signout}>(sign out)</button>}
+        {selector&&<button className='bg-purple-500 text-white p-2 m-2 my-2 rounded-md font-bold text-sm md:text-lg z-10' onClick={Gptsearch}>{isThere?"Homepage":"GptSearch"}</button>}
+        {selector&&<button className='text-white bg-red-600 p-2 m-2 rounded-md font-bold text-sm md:text-lg z-10' onClick={signout}>(sign out)</button>}
+        
         </div>
     </div>
   )
